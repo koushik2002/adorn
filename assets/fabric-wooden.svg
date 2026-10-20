@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <title>Illustrative warm walnut slats and fine wood grain</title>
+  <defs>
+    <linearGradient id="wood" x2="0" y2="1">
+      <stop stop-color="#ac7953"/><stop offset=".025" stop-color="#c18b61"/><stop offset=".08" stop-color="#ac744b"/><stop offset=".42" stop-color="#94603c"/><stop offset=".88" stop-color="#855333"/><stop offset=".96" stop-color="#704127"/><stop offset="1" stop-color="#472a1c"/>
+    </linearGradient>
+    <linearGradient id="grain-tone"><stop stop-color="#704321" stop-opacity=".1"/><stop offset=".35" stop-color="#e1a971" stop-opacity=".17"/><stop offset=".7" stop-color="#633a24" stop-opacity=".2"/><stop offset="1" stop-color="#c58c56" stop-opacity=".08"/></linearGradient>
+    <pattern id="grain" width="800" height="98" patternUnits="userSpaceOnUse">
+      <path d="M-20 14C140 24 218 4 365 17S605 30 830 12 M-20 28C147 37 253 15 405 27S650 36 830 25 M-20 42C135 56 257 33 420 43S636 55 830 41 M-20 64C130 73 255 51 431 66S672 73 830 60 M-20 82C168 86 212 73 412 83S660 94 830 78" fill="none" stroke="#492b19" stroke-opacity=".23" stroke-width="1.1"/>
+      <path d="M-20 10C142 18 224 1 370 12S635 22 830 9 M-20 31C160 40 270 23 408 33S670 44 830 30 M-20 58C160 68 277 45 430 59S640 67 830 54 M-20 90C147 100 275 82 446 91S678 100 830 89" fill="none" stroke="#e8b480" stroke-opacity=".15" stroke-width="1.35"/>
+      <path d="M0 49C154 48 198 66 286 57S385 32 491 44S702 65 800 52" fill="none" stroke="#58301d" stroke-opacity=".18" stroke-width="2.5"/>
+      <path d="M55 48c55-12 127-14 184-3s80 21 135 16" fill="none" stroke="#4c2d1a" stroke-opacity=".17" stroke-width=".7"/>
+    </pattern>
+    <pattern id="slats" width="800" height="100" patternUnits="userSpaceOnUse">
+      <path d="M0 0h800v98H0z" fill="url(#wood)"/>
+      <path d="M0 1h800v96H0z" fill="url(#grain-tone)"/>
+      <path d="M0 1h800v96H0z" fill="url(#grain)"/>
+      <path d="M0 1.5h800" stroke="#e8b88a" stroke-opacity=".5" stroke-width="1.3"/>
+      <path d="M0 97.5h800" stroke="#2d1b13" stroke-opacity=".55" stroke-width="1"/>
+    </pattern>
+    <filter id="pores" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".014 .62" numOctaves="2" stitchTiles="stitch" seed="17"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="soft-light"/>
+    </filter>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdda6" stop-opacity=".15"/><stop offset=".6" stop-color="#a16c44" stop-opacity="0"/><stop offset="1" stop-color="#201a16" stop-opacity=".12"/></linearGradient>
+  </defs>
+  <path d="M0 0h800v800H0z" fill="#4a2d1e"/>
+  <path d="M0 0h800v800H0z" fill="url(#slats)" filter="url(#pores)"/>
+  <path d="M0 0h800v800H0z" fill="url(#sun)"/>
+</svg>

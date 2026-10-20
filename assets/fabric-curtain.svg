@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <title>Illustrative softly folded greige sheer fabric</title>
+  <defs>
+    <linearGradient id="fold">
+      <stop stop-color="#8e897e"/><stop offset=".12" stop-color="#b3ad9f"/><stop offset=".3" stop-color="#ded8c9"/><stop offset=".45" stop-color="#e5dfd0"/><stop offset=".6" stop-color="#d8d1c2"/><stop offset=".77" stop-color="#bcb5a7"/><stop offset=".91" stop-color="#928a7f"/><stop offset="1" stop-color="#817b71"/>
+    </linearGradient>
+    <linearGradient id="daylight" x2="0" y2="1"><stop stop-color="#faf4df" stop-opacity=".2"/><stop offset=".5" stop-color="#ded6c5" stop-opacity=".02"/><stop offset="1" stop-color="#6c675d" stop-opacity=".14"/></linearGradient>
+    <pattern id="folds" width="200" height="800" patternUnits="userSpaceOnUse"><path d="M0 0h200v800H0z" fill="url(#fold)"/></pattern>
+    <pattern id="gauze" width="7" height="7" patternUnits="userSpaceOnUse">
+      <path d="M.8 0v7 M3.1 0v7 M5.5 0v7" stroke="#fff9e7" stroke-opacity=".31" stroke-width=".7"/>
+      <path d="M0 1.5h7 M0 5h7" stroke="#736e60" stroke-opacity=".16" stroke-width=".7"/>
+      <path d="M1 2h2 M4 5.5h2" stroke="#f5eedc" stroke-opacity=".22" stroke-width=".65"/>
+    </pattern>
+    <filter id="fibre" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".34 .72" numOctaves="2" stitchTiles="stitch" seed="23"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".13"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="soft-light"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <g filter="url(#fibre)">
+    <path d="M0 0h800v800H0z" fill="url(#folds)"/>
+    <path d="M0 0h800v800H0z" fill="url(#gauze)"/>
+    <path d="M7-20C-5 150 13 250 6 420S-7 650 8 820 M207-20C194 180 214 260 206 420S193 630 209 820 M407-20C396 150 415 255 405 415S395 640 410 820 M607-20C593 170 615 290 605 440S595 650 610 820" fill="none" stroke="#635d54" stroke-opacity=".18" stroke-width="14" filter="url(#soft)"/>
+    <path d="M80-20C70 170 96 315 83 490S90 690 82 820 M280-20C266 180 292 325 280 490S285 700 278 820 M480-20C469 160 492 330 480 510S488 690 478 820 M680-20C669 180 694 320 680 490S690 690 680 820" fill="none" stroke="#f5f0df" stroke-opacity=".2" stroke-width="26" filter="url(#soft)"/>
+  </g>
+  <path d="M0 0h800v800H0z" fill="url(#daylight)"/>
+</svg>

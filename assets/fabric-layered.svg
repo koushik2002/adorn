@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <title>Illustrative ivory layered sheer and opaque weave</title>
+  <defs>
+    <linearGradient id="base" x2="0" y2="1">
+      <stop stop-color="#f2eee2"/><stop offset=".55" stop-color="#ded8c9"/><stop offset="1" stop-color="#f1ebdf"/>
+    </linearGradient>
+    <linearGradient id="opaque" x2="0" y2="1">
+      <stop stop-color="#f1ebdc"/><stop offset=".05" stop-color="#eee6d6"/><stop offset=".42" stop-color="#e5ddca"/><stop offset=".94" stop-color="#ebe3d2"/><stop offset="1" stop-color="#cfc5b0"/>
+    </linearGradient>
+    <linearGradient id="sheer" x2="0" y2="1">
+      <stop stop-color="#b7b2a2" stop-opacity=".28"/><stop offset=".08" stop-color="#f8f5ed" stop-opacity=".16"/><stop offset=".8" stop-color="#fffdf4" stop-opacity=".28"/><stop offset="1" stop-color="#aba493" stop-opacity=".24"/>
+    </linearGradient>
+    <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M.5 0v6 M3.5 0v6" stroke="#a49a81" stroke-opacity=".19" stroke-width=".65"/>
+      <path d="M0 .7h6 M0 3.7h6" stroke="#fffdf4" stroke-opacity=".58" stroke-width=".8"/>
+      <path d="M1 1h1 M4 4h1" stroke="#7c725b" stroke-opacity=".1" stroke-width=".65"/>
+    </pattern>
+    <pattern id="mesh" width="9" height="9" patternUnits="userSpaceOnUse">
+      <path d="M1 0v9 M4 0v9 M7 0v9" stroke="#faf6e9" stroke-opacity=".65" stroke-width=".8"/>
+      <path d="M0 2h9 M0 6.5h9" stroke="#b8ae98" stroke-opacity=".28" stroke-width=".65"/>
+    </pattern>
+    <pattern id="bands" width="800" height="200" patternUnits="userSpaceOnUse">
+      <path d="M0 0h800v123H0z" fill="url(#opaque)"/>
+      <path d="M0 0h800v123H0z" fill="url(#weave)"/>
+      <path d="M0 123h800v77H0z" fill="url(#sheer)"/>
+      <path d="M0 123h800v77H0z" fill="url(#mesh)"/>
+      <path d="M0 1h800 M0 121.5h800" stroke="#fff9e9" stroke-opacity=".65" stroke-width="1.1"/>
+      <path d="M0 124h800 M0 199h800" stroke="#a99e87" stroke-opacity=".26" stroke-width=".9"/>
+    </pattern>
+    <filter id="fibre" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".52 .78" numOctaves="2" stitchTiles="stitch" seed="31"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".12"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="soft-light"/>
+    </filter>
+    <radialGradient id="light" cx=".19" cy=".13" r="1.05"><stop stop-color="#fffdf3" stop-opacity=".25"/><stop offset="1" stop-color="#605b4b" stop-opacity=".07"/></radialGradient>
+  </defs>
+  <g filter="url(#fibre)"><path d="M0 0h800v800H0z" fill="url(#base)"/><path d="M0 0h800v800H0z" fill="url(#bands)"/></g>
+  <path d="M0 0h800v800H0z" fill="url(#light)"/>
+</svg>
